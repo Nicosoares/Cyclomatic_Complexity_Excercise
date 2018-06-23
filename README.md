@@ -1,6 +1,6 @@
 # Cyclomatic_Complexity_Excercise
 
-Scores by Methods:
+Scores by Methods (V1):
 
 Class				Member											Cyclomatic Complexity
 
