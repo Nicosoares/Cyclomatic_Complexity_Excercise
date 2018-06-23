@@ -1,0 +1,16 @@
+C:\Users\nic_l\source\repos\MineSweeperKata\MineSweeperKataTestUnit\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\nic_l\source\repos\MineSweeperKata\MineSweeperKataTestUnit\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\nic_l\source\repos\MineSweeperKata\MineSweeperKataTestUnit\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\nic_l\source\repos\MineSweeperKata\MineSweeperKataTestUnit\bin\Debug\MineSweeperKataTestUnit.dll
+C:\Users\nic_l\source\repos\MineSweeperKata\MineSweeperKataTestUnit\bin\Debug\MineSweeperKataTestUnit.pdb
+C:\Users\nic_l\source\repos\MineSweeperKata\MineSweeperKataTestUnit\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\nic_l\source\repos\MineSweeperKata\MineSweeperKataTestUnit\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\nic_l\source\repos\MineSweeperKata\MineSweeperKataTestUnit\bin\Debug\MineSweeperKataLibrary.dll
+C:\Users\nic_l\source\repos\MineSweeperKata\MineSweeperKataTestUnit\bin\Debug\MineSweeperKataLibrary.pdb
+C:\Users\nic_l\source\repos\MineSweeperKata\MineSweeperKataTestUnit\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\nic_l\source\repos\MineSweeperKata\MineSweeperKataTestUnit\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\nic_l\source\repos\MineSweeperKata\MineSweeperKataTestUnit\obj\Debug\MineSweeperKataTestUnit.csprojAssemblyReference.cache
+C:\Users\nic_l\source\repos\MineSweeperKata\MineSweeperKataTestUnit\obj\Debug\MineSweeperKataTestUnit.csproj.CoreCompileInputs.cache
+C:\Users\nic_l\source\repos\MineSweeperKata\MineSweeperKataTestUnit\obj\Debug\MineSweeperKataTestUnit.csproj.CopyComplete
+C:\Users\nic_l\source\repos\MineSweeperKata\MineSweeperKataTestUnit\obj\Debug\MineSweeperKataTestUnit.dll
+C:\Users\nic_l\source\repos\MineSweeperKata\MineSweeperKataTestUnit\obj\Debug\MineSweeperKataTestUnit.pdb

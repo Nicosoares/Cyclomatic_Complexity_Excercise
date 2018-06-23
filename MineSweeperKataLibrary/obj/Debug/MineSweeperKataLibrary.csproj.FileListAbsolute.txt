@@ -1,0 +1,6 @@
+C:\Users\nic_l\source\repos\MineSweeperKata\MineSweeperKataLibrary\bin\Debug\MineSweeperKataLibrary.dll
+C:\Users\nic_l\source\repos\MineSweeperKata\MineSweeperKataLibrary\bin\Debug\MineSweeperKataLibrary.pdb
+C:\Users\nic_l\source\repos\MineSweeperKata\MineSweeperKataLibrary\obj\Debug\MineSweeperKataLibrary.csprojAssemblyReference.cache
+C:\Users\nic_l\source\repos\MineSweeperKata\MineSweeperKataLibrary\obj\Debug\MineSweeperKataLibrary.csproj.CoreCompileInputs.cache
+C:\Users\nic_l\source\repos\MineSweeperKata\MineSweeperKataLibrary\obj\Debug\MineSweeperKataLibrary.dll
+C:\Users\nic_l\source\repos\MineSweeperKata\MineSweeperKataLibrary\obj\Debug\MineSweeperKataLibrary.pdb
