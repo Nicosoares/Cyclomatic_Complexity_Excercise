@@ -25,15 +25,32 @@ namespace MineSweeperKataLibrary
         {
             for(int i = 0; i < Lines; i++)
             {
-                char[] chars = InputGrid[i].ToCharArray();
-                for (int j = 0; j < Columns; j++)
-                {
-                    if(chars[j] != '*')
-                        chars[j] = '0';
-                }
-                OutputGrid[i] = new string(chars);
+                OutputGrid[i] = new string(ChangeInlineDotsIntoZero(GetInputCharArray(i)));
             }
             
+        }
+
+        private char[] GetInputCharArray(int i)
+        {
+            return InputGrid[i].ToCharArray();
+        }
+
+        private char[] GetOutputCharArray(int i)
+        {
+            return OutputGrid[i].ToCharArray();
+        }
+
+        private char[] ChangeInlineDotsIntoZero(char[] chars)
+        {
+            for (int j = 0; j < Columns; j++)
+                ChangeDotIntoZero(chars, j);
+
+            return chars;
+        }
+        private void ChangeDotIntoZero(char[] chars, int j)
+        {
+            if (chars[j] != '*')
+                chars[j] = '0';
         }
 
         public void GenerateOutputField()
@@ -41,60 +58,72 @@ namespace MineSweeperKataLibrary
             TransformAllDotsIntoZeroes();
             for (int i = 0; i < Lines; i++)
             {
-                char[] chars = OutputGrid[i].ToCharArray();
-                for(int j = 0; j < Columns; j++)
-                {
-                    if (chars[j] == '*')
-                        UpdateSurroundingValues(i, j);
-                }
+                UpdateInlineMines(i);
             }
+        }
+
+        private void UpdateInlineMines(int i)
+        {
+            UpdateInlineMines(i, GetOutputCharArray(i));
+        }
+
+        private void UpdateInlineMines(int i, char[] chars)
+        {
+            for (int j = 0; j < Columns; j++)
+            {
+                CheckIfAsterisk(chars, i, j);
+            }
+        }
+
+        private void CheckIfAsterisk(char[] chars, int i, int j)
+        {
+            if (chars[j] == '*')
+                UpdateSurroundingValues(i, j);
         }
 
         private void UpdateSurroundingValues(int i, int j)
         {
-            bool iValidLowerIndex = false;
-            bool iValidHigherIndex = false;
-
-            bool jValidLowerIndex = false;
-            bool jValidHigherIndex = false;
-
-            if (i - 1 >= 0)
-                iValidLowerIndex = true;
-
-            if (i + 1 < Lines)
-                iValidHigherIndex = true;
-
-            if (j - 1 >= 0)
-                jValidLowerIndex = true;
-
-            if (j + 1 < Columns)
-                jValidHigherIndex = true;
-
-            if (iValidLowerIndex)
-                DotValuePlus1(i - 1, j);
-
-            if (iValidHigherIndex)
-                DotValuePlus1(i + 1, j);
-
-            if (jValidLowerIndex)
-                DotValuePlus1(i, j - 1);
-
-            if (jValidHigherIndex)
-                DotValuePlus1(i, j + 1);
-
-            if (iValidLowerIndex && jValidLowerIndex)
-                DotValuePlus1(i - 1, j - 1);
-
-            if (iValidLowerIndex && jValidHigherIndex)
-                DotValuePlus1(i - 1, j + 1);
-
-            if (iValidHigherIndex && jValidLowerIndex)
-                DotValuePlus1(i + 1, j - 1);
-
-            if (iValidHigherIndex && jValidHigherIndex)
-                DotValuePlus1(i + 1, j + 1);
-
+            UpdateAbove(i, j);
+            UpdateBelow(i, j);
+            UpdateLeft(i, j);
+            UpdateRight(i, j);
         }
+
+        private void UpdateAbove(int i, int j)
+        {
+            if (i + 1 < Lines)
+            {
+                DotValuePlus1(i + 1, j);
+                UpdateLeft(i + 1, j);
+                UpdateRight(i + 1, j);
+            }
+        }
+
+        private void UpdateBelow(int i, int j)
+        {
+            if (i - 1 >= 0)
+            {
+                DotValuePlus1(i - 1, j);
+                UpdateLeft(i - 1, j);
+                UpdateRight(i - 1, j);
+            }
+        }
+
+        private void UpdateRight(int i, int j)
+        {
+            if (j + 1 < Columns)
+            {
+                DotValuePlus1(i, j + 1);
+            }
+        }
+
+        private void UpdateLeft(int i, int j)
+        {
+            if (j - 1 >= 0)
+            {
+                DotValuePlus1(i, j - 1);
+            }
+        }       
 
         private void DotValuePlus1(int i, int j)
         {
